@@ -1,0 +1,7 @@
+python inference.py -f <your-text-file> -c <grad-tts-checkpoint> -t <number-of-timesteps> -s <speaker-id-if-multispeaker>
+
+n_spks = 1  # 247 for Libri-TTS filelist and 1 for LJSpeech
+
+
+
+single: python .\inference.py -f .\int_txt\input.txt -c .\checkpts\grad_1000.pt -t 20
