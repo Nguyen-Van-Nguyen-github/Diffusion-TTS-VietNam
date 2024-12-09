@@ -1,8 +1,18 @@
 # Diffusion-TTS-VietNam
+Đây là dự án chuyển đổi văn bản thành giọng nói sử dụng diffusion và hifi-gan. Mô hình này được tham khảo bởi mô hình được nhóm tác giả ở huawei lab nghiên cứu. LICENSE mình có để trong mô hình các bạn tham khảo nhé.
+Dự án còn phát triển tích cực cho multi speaker và đang cải thiện âm thanh cho phù hợp với ngôn ngữ vùng miền tại việt nam.
+mọi đóng góp hay góp ý cho dự án vui lòng liên hệ: nguyenvannguyen192402@gmail.com
+
+-[âm thanh nguồn](audio-source/)
+-[âm thanh sinh](out/)
+-[text](input/)
+
 ## Cài Đặt
 Tôi sử dụng môi trường Python 3.8.0 và Card đồ họa nvidia RTX A4000 cho toàn bộ quá trình huấn luyện.
 
 ```
+python -m venv venv
+venv/Scripts/activate
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
 ```
@@ -12,6 +22,17 @@ Khởi tạo `monotonic_align` code (Cython):
 ```
 cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
 ```
+## Tải model huấn luyện sẵn cho giọng Nữ
+[Diffusion-TTS-Vietnam](https://drive.google.com/drive/folders/1K38bXWba7zC-mJ42Hf1QloWyG8BNnFDj?usp=sharing)
+Đặt vào thư mục: checkpts (file grad_1000.pt)
+[HiFi-Gan-Vietnam](https://drive.google.com/file/d/1fnvoRd_VCC-Me97j_EUSLOFwA86VgSyY/view?usp=sharing)
+Đặt vào thư mục: checkpts (file g_00300000)
+
+## Tải model huấn luyện sẵn cho giọng Nam
+[Diffusion-TTS-Vietnam](https://drive.google.com/file/d/1ele07_tHl9fczekAuTXMLV51dsoV5ja4/view?usp=sharing)
+Đặt vào thư mục: checkpts (file grad_641.pt)
+[HiFi-Gan-Vietnam](https://drive.google.com/file/d/1MipWBU31V9s-aQ-1tcbUjhQswlhBk8vg/view?usp=sharing)
+Đặt vào thư mục: checkpts (file g_00425000)
 
 ## Suy Luận
     ```
@@ -21,20 +42,8 @@ cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
 4. Kiểm tra thư mục out
 
 ## Training
-
-1. Make filelists of your audio data like ones included into `resources/filelists` folder. For single speaker training refer to `jspeech` filelists and to `libri-tts` filelists for multispeaker.
-2. Set experiment configuration in `params.py` file.
-3. Specify your GPU device and run training script:
-    ```bash
-    export CUDA_VISIBLE_DEVICES=YOUR_GPU_ID
-    python train.py  # if single speaker
-    python train_multi_speaker.py  # if multispeaker
-    ```
-4. To track your training process run tensorboard server on any available port:
-    ```bash
-    tensorboard --logdir=YOUR_LOG_DIR --port=8888
-    ```
-    During training all logging information and checkpoints are stored in `YOUR_LOG_DIR`, which you can specify in `params.py` before training.
+Tham Khảo dự án này, mình đã đựa vào nó để huấn luyện cho tiếng việt, dự án ban đầu được huấn luyện cho tiếng anh.
+[Diffusion-Grad-TTS](https://github.com/huawei-noah/Speech-Backbones/tree/main/Grad-TTS)
 
 ## References
 
