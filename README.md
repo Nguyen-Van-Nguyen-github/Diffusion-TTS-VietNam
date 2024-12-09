@@ -13,10 +13,6 @@ Official implementation of the Grad-TTS model based on Diffusion Probabilistic M
 
 ## Abstract
 
-**Demo page** with voiced abstract: [link](https://grad-tts.github.io/).
-
-Recently, denoising diffusion probabilistic models and generative score matching have shown high potential in modelling complex data distributions while stochastic calculus has provided a unified point of view on these techniques allowing for flexible inference schemes. In this paper we introduce Grad-TTS, a novel text-to-speech model with score-based decoder producing mel-spectrograms by gradually transforming noise predicted by encoder and aligned with text input by means of Monotonic Alignment Search. The framework of stochastic differential equations helps us to generalize conventional diffusion probabilistic models to the case of reconstructing data from noise with different parameters and allows to make this reconstruction flexible by explicitly controlling trade-off between sound quality and inference speed. Subjective human evaluation shows that Grad-TTS is competitive with state-of-the-art text-to-speech approaches in terms of Mean Opinion Score.
-
 ## Installation
 
 Firstly, install all Python package requirements:
@@ -31,15 +27,9 @@ Secondly, build `monotonic_align` code (Cython):
 cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
 ```
 
-**Note**: code is tested on Python==3.6.9.
+**Note**: code is tested on Python==3.8.0.
 
 ## Inference
-
-You can download Grad-TTS and HiFi-GAN checkpoints trained on LJSpeech* and Libri-TTS datasets (22kHz) from [here](https://drive.google.com/drive/folders/1grsfccJbmEuSBGQExQKr3cVxNV0xEOZ7?usp=sharing).
-
-***Note**: we open-source 2 checkpoints of Grad-TTS trained on LJSpeech. They are the same models but trained with different positional encoding scale: **x1** (`"grad-tts-old.pt"`, ICML 2021 sumbission model) and **x1000** (`"grad-tts.pt"`). To use the former set `params.pe_scale=1` and to use the latter set `params.pe_scale=1000`. Libri-TTS checkpoint was trained with scale **x1000**.
-
-Put necessary Grad-TTS and HiFi-GAN checkpoints into `checkpts` folder in root Grad-TTS directory (note: in `inference.py` you can change default HiFi-GAN path).
 
 1. Create text file with sentences you want to synthesize like `resources/filelists/synthesis.txt`.
 2. For single speaker set `params.n_spks=1` and for multispeaker (Libri-TTS) inference set `params.n_spks=247`.
