@@ -23,15 +23,15 @@ Khởi tạo `monotonic_align` code (Cython):
 cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
 ```
 ## Tải model huấn luyện sẵn cho giọng Nữ
-[Diffusion-TTS-Vietnam](https://drive.google.com/drive/folders/1K38bXWba7zC-mJ42Hf1QloWyG8BNnFDj?usp=sharing)
+- [Diffusion-TTS-Vietnam](https://drive.google.com/drive/folders/1K38bXWba7zC-mJ42Hf1QloWyG8BNnFDj?usp=sharing)
 Đặt vào thư mục: checkpts (file grad_1000.pt)
-[HiFi-Gan-Vietnam](https://drive.google.com/file/d/1fnvoRd_VCC-Me97j_EUSLOFwA86VgSyY/view?usp=sharing)
+- [HiFi-Gan-Vietnam](https://drive.google.com/file/d/1fnvoRd_VCC-Me97j_EUSLOFwA86VgSyY/view?usp=sharing)
 Đặt vào thư mục: checkpts (file g_00300000)
 
 ## Tải model huấn luyện sẵn cho giọng Nam
-[Diffusion-TTS-Vietnam](https://drive.google.com/file/d/1ele07_tHl9fczekAuTXMLV51dsoV5ja4/view?usp=sharing)
+- [Diffusion-TTS-Vietnam](https://drive.google.com/file/d/1ele07_tHl9fczekAuTXMLV51dsoV5ja4/view?usp=sharing)
 Đặt vào thư mục: checkpts (file grad_641.pt)
-[HiFi-Gan-Vietnam](https://drive.google.com/file/d/1MipWBU31V9s-aQ-1tcbUjhQswlhBk8vg/view?usp=sharing)
+- [HiFi-Gan-Vietnam](https://drive.google.com/file/d/1MipWBU31V9s-aQ-1tcbUjhQswlhBk8vg/view?usp=sharing)
 Đặt vào thư mục: checkpts (file g_00425000)
 
 ## Suy Luận
