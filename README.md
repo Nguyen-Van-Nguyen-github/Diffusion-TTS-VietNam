@@ -1,18 +1,4 @@
-<p align="center">
-    <img src="resources/reverse-diffusion.gif" alt="drawing" width="500"/>
-</p>
-
-
-# Grad-TTS
-
-Official implementation of the Grad-TTS model based on Diffusion Probabilistic Modelling. For all details check out our paper accepted to ICML 2021 via [this](https://arxiv.org/abs/2105.06337) link.
-
-**Authors**: Vadim Popov\*, Ivan Vovk\*, Vladimir Gogoryan, Tasnima Sadekova, Mikhail Kudinov.
-
-<sup>\*Equal contribution.</sup>
-
-## Abstract
-
+# Diffusion-TTS-VietNam
 ## Installation
 
 Firstly, install all Python package requirements:
@@ -30,16 +16,11 @@ cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
 **Note**: code is tested on Python==3.8.0.
 
 ## Inference
-
-1. Create text file with sentences you want to synthesize like `resources/filelists/synthesis.txt`.
-2. For single speaker set `params.n_spks=1` and for multispeaker (Libri-TTS) inference set `params.n_spks=247`.
-3. Run script `inference.py` by providing path to the text file, path to the Grad-TTS checkpoint, number of iterations to be used for reverse diffusion (default: 10) and speaker id if you want to perform multispeaker inference:
     ```bash
     python inference.py -f <your-text-file> -c <grad-tts-checkpoint> -t <number-of-timesteps> -s <speaker-id-if-multispeaker>
+    python .\inference.py -f .\int_txt\input.txt -c .\checkpts\grad_1000.pt -t 20
     ```
 4. Check out folder called `out` for generated audios.
-
-You can also perform *interactive inference* by running Jupyter Notebook `inference.ipynb` or by using our [Google Colab Demo](https://colab.research.google.com/drive/1YNrXtkJQKcYDmIYJeyX8s5eXxB4zgpZI?usp=sharing).
 
 ## Training
 
