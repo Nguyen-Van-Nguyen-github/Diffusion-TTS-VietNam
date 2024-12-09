@@ -5,7 +5,7 @@ mọi đóng góp hay góp ý cho dự án vui lòng liên hệ: nguyenvannguyen
 
 - [âm thanh nguồn- thư mục audio-source](audio-source/audio-source.wav) 
 - [âm thanh sinh - thư mục out](out/Result.wav)
-- [text](input/)
+- [text - thư mục int_txt](input/input.txt)
 
 ## Cài Đặt
 Tôi sử dụng môi trường Python 3.8.0 và Card đồ họa nvidia RTX A4000 cho toàn bộ quá trình huấn luyện.
