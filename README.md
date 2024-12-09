@@ -1,26 +1,24 @@
 # Diffusion-TTS-VietNam
-## Installation
+## Cài Đặt
+Tôi sử dụng môi trường Python 3.8.0 và Card đồ họa nvidia RTX A4000 cho toàn bộ quá trình huấn luyện.
 
-Firstly, install all Python package requirements:
-
-```bash
+```
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
 ```
 
-Secondly, build `monotonic_align` code (Cython):
+Khởi tạo `monotonic_align` code (Cython):
 
-```bash
+```
 cd model/monotonic_align; python setup.py build_ext --inplace; cd ../..
 ```
 
-**Note**: code is tested on Python==3.8.0.
-
-## Inference
-    ```bash
+## Suy Luận
+    ```
     python inference.py -f <your-text-file> -c <grad-tts-checkpoint> -t <number-of-timesteps> -s <speaker-id-if-multispeaker>
     python .\inference.py -f .\int_txt\input.txt -c .\checkpts\grad_1000.pt -t 20
     ```
-4. Check out folder called `out` for generated audios.
+4. Kiểm tra thư mục out
 
 ## Training
 
