@@ -3,9 +3,9 @@
 Dự án còn phát triển tích cực cho multi speaker và đang cải thiện âm thanh cho phù hợp với ngôn ngữ vùng miền tại việt nam.
 mọi đóng góp hay góp ý cho dự án vui lòng liên hệ: nguyenvannguyen192402@gmail.com
 
--[âm thanh nguồn](audio-source/audio-source.wav)
--[âm thanh sinh](out/)
--[text](input/)
+- [âm thanh nguồn- thư mục audio-source](audio-source/audio-source.wav) 
+- [âm thanh sinh - thư mục out](out/Result.wav)
+- [text](input/)
 
 ## Cài Đặt
 Tôi sử dụng môi trường Python 3.8.0 và Card đồ họa nvidia RTX A4000 cho toàn bộ quá trình huấn luyện.
