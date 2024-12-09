@@ -3,7 +3,7 @@
 Dự án còn phát triển tích cực cho multi speaker và đang cải thiện âm thanh cho phù hợp với ngôn ngữ vùng miền tại việt nam.
 mọi đóng góp hay góp ý cho dự án vui lòng liên hệ: nguyenvannguyen192402@gmail.com
 
--[âm thanh nguồn](audio-source/)
+-[âm thanh nguồn](audio-source/audio-source.wav)
 -[âm thanh sinh](out/)
 -[text](input/)
 
